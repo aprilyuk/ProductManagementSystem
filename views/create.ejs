@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <style>
+        label{
+            font-size:1em;
+            color:rgb(60, 22, 216);
+            width:200;
+        }
+        body{
+        	background-color:rgb(174, 224, 247);
+            text-align:center;
+        }
+        .heading{
+        	color:rgb(27, 29, 160);
+            font-size:1.5em;
+            text-align:center;
+		}
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Create - Product Management System</h1>
+    </div>
+    <form>
+        <button type="submit" formaction="/home">Back to home</button>
+    </form>
+    <%=message%>
+    <form action="/create" method="POST">
+    	<br>
+    	<label for='itemID'><b>id:</b></label>
+        <input type="text" id="itemID" name="itemID" placeholder="">
+        <br>
+        <label for='name'><b>name:</b></label>
+        <input type="text" id="name" name="name" placeholder="">
+        <br>
+        <label for='desc'><b>description:</b></label>
+        <input type="text" id="desc" name="desc" placeholder="">
+        <br>
+        <label for='category'><b>category:</b></label>
+        <input type="text" id="category" name="category" placeholder="">
+        <br>
+	<label for='price'><b>price:$</b></label>
+        <input type="text" id="price" name="price" placeholder="">
+        <br><br>
+        <input type="submit" value="Create" /> 
+        <br>
+    </form>
+</body>
+</html>

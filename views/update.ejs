@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update - Product Management System</title>
+    <style>
+        body{
+        	background-color:rgb(174, 224, 247);
+			text-align:center;
+        }
+        .heading{
+        	color:rgb(27, 29, 160);
+            font-size:1.5em;
+			text-align:center;
+		}
+		ol{
+   			padding:0;
+    		list-style-position:inside;
+    		border:1px solid #ddd;
+		}
+		li {
+			padding:6px;
+			border-bottom:1px solid #ddd;
+		}
+		li:last-child{
+			border-bottom:none;
+		}
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Update - Product Management System</h1>
+    </div>
+    <form>
+        <button type="submit" formaction="/home">Back to home</button>
+    </form>
+    <div>
+    	<%= msg %>
+    	<ol>
+        	<% for (var i of foundProduct) { %>
+        	<li>
+            	id: <%= i.id %><br>
+            	name: <%= i.name %><br>
+            	description: <%= i.description %><br>
+            	category: <%= i.category %>
+            	<form action="/update" method="post">
+        		price:$ <input type="text" id="price" name="price" placeholder="<%= i.price %>">
+        	</li>
+        	<% } %>
+    	</ol>
+    </div>
+        <br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

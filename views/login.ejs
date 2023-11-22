@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        label{
+            font-size:1em;
+            color:rgb(60, 22, 216);
+            width:200;
+        }
+        body{
+        	background-color:rgb(174, 224, 247);
+            text-align:center;
+        }
+        .heading{
+        	color:rgb(27, 29, 160);
+            font-size:1.5em;
+            text-align:center;
+		}
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Product Management System</h1>
+    </div>
+    <form action="/login" method="post">
+        <label for='username'><b>Username:</b></label><br>
+        <input type="text" id="username" name="username" placeholder=""><br>
+        <label for='password'><b>Password:</b></label><br>
+        <input type="password" id="password" name="password" placeholder=""><br><br>
+    	<button type="submit">Login</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search - Product Management System</title>
+    <style>
+        label{
+            font-size:1em;
+            color:rgb(60, 22, 216);
+            width:200;
+        }
+        body{
+        	background-color:rgb(174, 224, 247);
+            text-align:center;
+        }
+        .heading{
+        	color:rgb(27, 29, 160);
+            font-size:1.5em;
+            text-align:center;
+		}
+        .reminder{
+        	color:rgb(95, 95, 95);
+        }
+		ol{
+   			padding:0;
+    		list-style-position:inside;
+    		border:1px solid #ddd;
+		}
+		li {
+			padding:6px;
+			border-bottom:1px solid #ddd;
+		}
+		li:last-child{
+			border-bottom:none;
+		}
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Search - Product Management System</h1>
+    </div>
+    <form>
+        <button type="submit" formaction="/home">Back to home</button>
+    </form>
+    <b class="reminder">Enter product ID to search for product details.</b>
+    <form action="/detail" method="post">
+    	<br>
+        <label for="itemID"><b>Product ID:</b></label>
+        <input type="text" id="itemID" name="itemID" placeholder=""><br>
+    </form>
+    <%= msg %>
+</body>
+</html>
+
+    

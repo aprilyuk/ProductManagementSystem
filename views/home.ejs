@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        label{
+            font-size:1em;
+            color:rgb(60, 22, 216);
+            width:200;
+        }
+        body{
+        	background-color:rgb(174, 224, 247);
+            text-align:center;
+        }
+        .heading{
+        	color:rgb(27, 29, 160);
+            text-align:center;
+            font-size:1.5em;
+		}
+        .item_num{
+        	color:gray;
+        }
+		ol{
+   			padding:0;
+    		list-style-position:inside;
+    		border:1px solid #ddd;
+            text-align:center;
+		}
+		li {
+			padding:6px;
+			border-bottom:1px solid #ddd;
+            text-align:center;
+		}
+		li:last-child{
+			border-bottom:none;
+		}
+        table
+        { 
+        margin-left: auto;
+        margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Product Management System</h1>
+    </div>
+    <form>
+        <button type="submit" formaction="/create">create</button>
+        <label> - </label>
+        <button type="submit" formaction="/search">search</button>
+    </form>
+    <div>
+    	<%= msg %>
+    	<ol>
+            
+            <li>
+                <table>
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% for (var i of foundProduct) { %>
+                        <tr>
+                          <td><%= i.id %></td>
+                          <td><%= i.name %></td>
+                          <td><%= i.description %></td>
+                          <td><%= i.category %></td>
+                          <td><%= i.price %></td>
+                        </tr>
+                      <% } %>
+                    </tbody>
+                  </table>
+            </li>
+            
+        </ol>
+    </div>
+    <br>
+    <form><button type="submit" formaction="/logout">logout</button></form>
+</body>
+</html>
