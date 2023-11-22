@@ -4,7 +4,7 @@ Group: 87
 Name: 
 Tsang Yuk Ting (12983304)
 
-Application link: https://projectsample381.render.com/
+Application link: https://productmanagementsystem-rkia.onrender.com
 
 Welcome to the README file for the Product Management System. This document provides an overview of the system, its functionalities, and the available API endpoints.
 ********************************************
